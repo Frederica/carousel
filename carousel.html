@@ -1,0 +1,68 @@
+
+
+<!DOCTYPE html>
+<style>
+  #display{
+  		display:block;
+  		margin-right: auto;
+  		margin-left: auto;
+  }
+</style>
+
+
+<body>
+<div class= "carousel">
+
+	<img id="display"src="data/2.jpg">
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"> </script>
+
+<script>
+
+var pics= ["data/3.jpg","data/4.jpg","data/5.jpg","data/6.jpg"];
+
+$().each(pics, function(){
+	$('#display').attr('src', pics[index])
+})
+
+	
+
+</script>
+
+<!-- <notes>
+	pics[0]=new Image();
+	pics[0].src= "data/2.jpg";
+	pics[1]=new Image();
+	pics[1].src= "data/3.jpg";
+	pics[2]=new Image();
+	pics[2].src= "data/4.jpg";
+	pics[3]=new Image();
+	pics[3].src= "data/5.jpg";
+	pics[4]=new Image();
+	pics[4].src= "data/6.jpg";
+
+
+	var src= $(display).attr("src")
+
+
+		$('#display').fadeOut(900, function() {
+		for (var i=0; i < pics.length; i++)
+		{
+		$(this).attr('src', pics[i]).fadeIn(900)
+		}
+
+
+
+	for (var i=0; i < pics.length; i++)
+		{
+			$('#display').delay(1000).attr('src', pics[i])
+		};
+
+
+</notes> -->
+</body>
