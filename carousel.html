@@ -13,7 +13,7 @@
 <body>
 <div class= "carousel">
 
-	<img id="display"src="data/2.jpg">
+	<img id="display" src="data/3.jpg">
 
 </div>
 
@@ -24,15 +24,23 @@
 
 <script>
 
-var pics= ["data/3.jpg","data/4.jpg","data/5.jpg","data/6.jpg"];
+var pics= ["data/2.jpg", "data/3.jpg","data/4.jpg","data/5.jpg","data/6.jpg"];
 
-$().each(pics, function(){
-	$('#display').attr('src', pics[index])
-})
+$.each(pics, function (){
+	$('#display').attr('src', this).delay(500).fadeIn(900).fadeOut(700);
+});
 
-	
+// $('#display').fadeOut(700, function(){
+// 	 for (var i=0; i < pics.length; i++)
+// 		{
+// 		$(this).attr('src', pics[i]).delay(500).fadeIn(900).fadeOut(700); 
+// 		 }
+// 	});
+
+
 
 </script>
+
 
 <!-- <notes>
 	pics[0]=new Image();
@@ -62,6 +70,17 @@ $().each(pics, function(){
 		{
 			$('#display').delay(1000).attr('src', pics[i])
 		};
+
+// function(){
+// 	for (var i=0; i<pics.lenght; i++){
+// 		$(this).attr('src', pic[i]).fadeOut(600)
+// 	}
+
+
+// $().each(pics, function(){
+// 	$('#display').attr('src', pics[index])
+// })
+
 
 
 </notes> -->
